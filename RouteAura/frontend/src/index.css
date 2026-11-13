@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --color-midnight: #0B1426;
+  --color-midnight-2: #14203A;
+  --color-teal-aura: #14E0C3;
+  --color-teal-dark: #0AA893;
+  --color-offwhite: #F6F8FB;
+  --color-slate-aura: #64748B;
+  --color-amber-aura: #F5A524;
+  --color-coral-aura: #EF5B5B;
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-sans); background: var(--color-offwhite); color: #0B1426; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, .font-display { font-family: var(--font-display); letter-spacing: -0.01em; }
+.leaflet-container { font-family: var(--font-sans); border-radius: 14px; }
+.seat-hatch { background-image: repeating-linear-gradient(45deg, rgba(245,165,36,.35) 0 4px, transparent 4px 8px); }
+@keyframes shimmer { 0% { background-position: -400px 0 } 100% { background-position: 400px 0 } }
+.skeleton { background: linear-gradient(90deg, #e6ebf2 25%, #f3f6fa 50%, #e6ebf2 75%); background-size: 800px 100%; animation: shimmer 1.3s infinite linear; }
+@media print { .no-print { display: none !important; } body { background: #fff; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
